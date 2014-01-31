@@ -7,7 +7,6 @@ To first obtain the engineData you will need to install psd-tools, then you can 
 
 #HOW TO
 
-    '''
     from psd_tools import PSDImage
     from engineData import getFontAndColorDict
     #open the psd
@@ -19,11 +18,12 @@ To first obtain the engineData you will need to install psd-tools, then you can 
         #get the raw engine data
         rawData = layer._tagged_blocks['TySh'][-1][-1][-1][-1]
         rawDataValue = rawData.value
-    propDict= {'FontSet':'','Text':'','FontSize':'','A':'','R':'','G':'','B':''}
-    getFontAndColorDict(propDict,engineDataValue)
-    #gettin the text from the dict is as normal now
-    myText = propDict['Text']
-    myFont = propDict['FontSet']'''
+        
+        propDict= {'FontSet':'','Text':'','FontSize':'','A':'','R':'','G':'','B':''}
+        getFontAndColorDict(propDict,engineDataValue)
+        #Then just index into the dictionary to get the values
+        myText = propDict['Text']
+        myFont = propDict['FontSet']
   
   
   *note A R G B are percentages so to get the actual value multiply by 255
