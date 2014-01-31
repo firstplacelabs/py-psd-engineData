@@ -7,7 +7,7 @@ To first obtain the engineData you will need to install psd-tools, then you can 
 
 #HOW TO
 
-'''
+'''python
 from psd_tools import PSDImage
 from engineData import getFontAndColorDict
 
