@@ -6,6 +6,8 @@ Reads the text, font type, font size and color from a photoshop psd file
 To first obtain the engineData you will need to install psd-tools, then you can parse the engineData with the following:
 
 #HOW TO
+
+'''
 from psd_tools import PSDImage
 from engineData import getFontAndColorDict
 
@@ -30,5 +32,5 @@ for layer in reversed(psd.layers):
   
   *note A R G B are percentages so to get the actual value multiply by 255
   
-  rNumeric = propDict['R'] * 255
+  rNumeric = propDict['R'] * 255'''
 
